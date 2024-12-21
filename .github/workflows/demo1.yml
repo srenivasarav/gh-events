@@ -6,6 +6,16 @@ on:
       - closed
       - reopened
       - review_requested
+    branches:
+      - 'release/**'
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - 'release/**'
+      - 'feature/*'
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
