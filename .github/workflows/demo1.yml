@@ -7,7 +7,8 @@ on:
       - reopened
       - review_requested
     branches:
-      - 'release/**'
+      - release
+      - master
   workflow_dispatch:
   push:
     branches:
